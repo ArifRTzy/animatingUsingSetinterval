@@ -1,0 +1,22 @@
+<p></p>
+<p></p>
+<script>
+    var getElement = document.getElementsByTagName("p");
+    var second = 0;
+    var minute = 0
+    var changeSecond = setInterval(timee,100);
+    getElement[1].style.display="flex";
+    function timee(){
+    //    if(second>=30){
+      //      clearInterval(changeSecond);
+  //      }else{
+            getElement[1].innerHTML = second;
+            second+=1;
+            if(second == 60){
+                second = 0;
+                minute++;
+                getElement[0].innerHTML = minute;
+            }
+//        }
+    }
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: blue;
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+        
+        #box{
+            background-color: bisque;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+        </div>
+    </div>
+    <p id="elm"></p>
+    <script>
+        var pos = 0;
+        var second = 0;
+        var geteelm = document.getElementById("elm");
+        var box = document.getElementById('box');
+        var y = setInterval(sec,1000);
+
+        function move(){
+            if(pos >= 0){
+                pos+=1;
+                box.style.left = pos+'px';
+                if(pos == 370){
+                    clearInterval(t);
+                    return animatedRev = setInterval(rev,10);
+                }
+            }
+        }
+        function sec(){
+            geteelm.innerHTML = second; 
+            second++;
+        }
+
+        function rev(){
+                pos--;
+                box.style.left = pos+"px";
+                if(pos == 0){
+                    clearInterval(animatedRev);
+                    return t = setInterval(move,10);
+                }
+        }
+
+        if(pos == 0){
+            var t = setInterval(move,10);
+        }else if(pos2 == 370){
+            //var reverse = setTimeout(rev,3900);
+            var animatedRev = setInterval(rev,10);
+        }
+    </script>
+</body>
+</html>
