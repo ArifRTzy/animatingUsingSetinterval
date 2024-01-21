@@ -1,3 +1,3 @@
 # animatingUsingSetinterval
-simple animation using setinterval
-Thanks1
+simple animation using setinterval.
+Thanks!
